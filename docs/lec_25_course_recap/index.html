@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Course recap
+  #
+
+It might be worthwhile to recall what we learned in this course:
+
+
+Perhaps first and foremost, that it is possible to mathematically define what it means for a cryptographic scheme to be secure. In the cases we studied, such a definition could always be described as a &ldquo;security game&rdquo;. That is, we first define what it means for a scheme to be insecure. Then, a scheme is secure if it is not insecure. The notion of &ldquo;insecurity&rdquo; is that there exists some adversarial strategy that succeeds with higher probability than what it should have. We normally don&rsquo;t limit the strategy of the adversary but only his or her capabilities: its computational power and the type of access it has to the system (e.g., chosen plaintext, chosen ciphertext, etc.). We also talked how the notion of secrecy requires randomness and how many real-life failures of cryptosystems amount to faulty assumptions on the sources of randomness.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/docs/lec_25_course_recap/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="Course recap">
+  <meta property="og:description" content="Course recap#It might be worthwhile to recall what we learned in this course:
+Perhaps first and foremost, that it is possible to mathematically define what it means for a cryptographic scheme to be secure. In the cases we studied, such a definition could always be described as a “security game”. That is, we first define what it means for a scheme to be insecure. Then, a scheme is secure if it is not insecure. The notion of “insecurity” is that there exists some adversarial strategy that succeeds with higher probability than what it should have. We normally don’t limit the strategy of the adversary but only his or her capabilities: its computational power and the type of access it has to the system (e.g., chosen plaintext, chosen ciphertext, etc.). We also talked how the notion of secrecy requires randomness and how many real-life failures of cryptosystems amount to faulty assumptions on the sources of randomness.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+<title>Course recap | My New Hugo Site</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="http://localhost:1313/docs/lec_25_course_recap/">
+<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.5646b758ad7fc768426d038ad6c1de1c53feca538c4d1e494a92131793fa1e64.js" integrity="sha256-Vka3WK1/x2hCbQOK1sHeHFP&#43;ylOMTR5JSpITF5P6HmQ=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          renderMathInElement(document.body, {
+              delimiters: [
+                  {left: "$$", right: "$$", display: true}, 
+                  {left: "$", right: "$", display: false}  
+              ]
+          });
+      });
+  </script>
+  <script>
+      MathJax = {
+          tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$'], ['\\[', '\\]']]
+          }
+      };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_00_0_foreword/" class="">Foreword and Syllabus</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_00_1_mathematical-background/" class="">Mathematical Background</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_01_introduction/" class="">Introduction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_02_computational-security/" class="">Computational security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_03_pseudorandom-generators/" class="">Pseudorandomness</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_04_pseudorandom-functions/" class="">Pseudorandom functions</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_05_prf-from-prg/" class="">PRFs from PRGs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_06_cca/" class="">Chosen Ciphertext Security</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_07_hash_functions/" class="">Hash Functions, Random Oracles, and Bitcoin</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_08_hash_functions_part2/" class="">Hash functions II: Key derivations, protecting passwords, Merkle trees</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_10_public_key_intro/" class="">Public key cryptography</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_11_concrete_pkc/" class="">Public key encryption candidates</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_12_lattices/" class="">Lattice based cryptography</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_13_handshake/" class="">Secure communication over insecure channels</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_14_zero_knowledge/" class="">Zero Knowledge proofs</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_15_fhe/" class="">Fully Homomorphic Encryption</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_16_fhe_part2/" class="">FHE II: Construction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_17_sfe/" class="">Multiparty secure computation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_18_sfe_part2/" class="">MPC II: Construction from FHE</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_19_quantum/" class="">Quantum computing</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_20_quantum_part2/" class="">Quantum II: Shor</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_21_obfuscation/" class="">Software obfuscation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_22_obfuscation_part2/" class="">Obfuscation II: applications</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_23_anonymous/" class="">Anonymous communication</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_24_policy/" class="">Ethical, moral and policy considerations</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/lec_25_course_recap/" class="active">Course recap</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Course recap</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-things-we-did-not-cover">Some things we did not cover</a></li>
+    <li><a href="#what-i-hope-you-learned">What I hope you learned</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="course-recap">
+  Course recap
+  <a class="anchor" href="#course-recap">#</a>
+</h1>
+<p>It might be worthwhile to recall what we learned in this course:</p>
+<ul>
+<li>
+<p>Perhaps first and foremost, that it is possible to <em>mathematically define</em> what it means for a cryptographic scheme to be secure. In the cases we studied, such a definition could always be described as a &ldquo;security game&rdquo;. That is, we first define what it means for a scheme to be <em>insecure</em>. Then, a scheme is secure if it is not insecure. The notion of &ldquo;insecurity&rdquo; is that there exists some adversarial strategy that succeeds with higher probability than what it should have. We normally don&rsquo;t limit the <em>strategy</em> of the adversary but only his or her <em>capabilities</em>: its computational power and the type of access it has to the system (e.g., chosen plaintext, chosen ciphertext, etc.). We also talked how the notion of <em>secrecy</em> requires <em>randomness</em> and how many real-life failures of cryptosystems amount to faulty assumptions on the sources of randomness.</p>
+</li>
+<li>
+<p>We saw the importance of being <em>conservative</em> in security definitions. For example, how despite the fact that the notion of chosen ciphertext attack (CCA) security seems too strong to capture any realistic scenario (e.g., when do we let an adversary play with a decryption box?), there are many natural cases where the using a CPA instead of a CCA secure encryption would lead to an attack on the overall protocol.</p>
+</li>
+<li>
+<p>We saw how we can prove security by <em>reductions</em>. Suppose we have a scheme $S$ that achieves some security notion $X$ (for example, $S$ might be a function that achieves the security notion of being a pseudorandom generator) and we use it to build a scheme $T$ that we want to achieve a security notion $Y$ (for example, we want $T$ to be a message authentication code). To prove $T$ is secure, we show how we can transform an adversary $B$ that wins against $T$ in the security game of $Y$ into an adversary $A$ that wins against $S$ in the security game of $X$. Typically, the adversary $A$ will run $B$ &ldquo;in its belly&rdquo;, simulating for $B$ the security game $Y$ with respect to $T$. This can be somewhat confusing, so please re-read the last three sentences and make sure you understand this crucial notion.</p>
+</li>
+<li>
+<p>We also saw some of the concrete wonderful things we can do in cryptography:</p>
+</li>
+<li>
+<p>In the world of <em>private key cryptography</em>, we saw that based on the PRG conjecture we can get a CPA secure private key encryption (which in particular has key shorter than message), pseudorandom functions, message authentication codes, CCA secure encryption, commitment schemes, and even zero knowledge proofs for NP complete languages.</p>
+</li>
+<li>
+<p>We saw that assuming the existence of <em>collision resistant hash functions</em>, we can get message authentication codes (and digital signatures) where the key is shorter than the message. We talked about the heuristic of how we can model hash functions as a <em>random oracle</em> , and use that for &ldquo;proofs of work&rdquo; in the context of bitcoin and password derivation, as well as many other settings.</p>
+</li>
+<li>
+<p>We also discussed practical constructions of private key primitives such as the AES block ciphers, and how such block ciphers are modeled as pseudorandom permutations and how we can use them to get CPA or CCA secure encryption via various modes such as CBC or GCM. We also discussed the Merkle and Davis-Meyer length extension construction for hash functions, and how the Merkle tree construction can be used for secure storage.</p>
+</li>
+<li>
+<p>We saw the revolutionary notion of <em>public key encryption</em>, that two people can talk without having coordinated in advance. We saw constructions for this based on discrete log (e.g., the Diffie-Hellman protocol), factoring (e.g., the Rabin and RSA trapdoor permutations), and the <em>learning with errors</em> (LWE) problem. We saw the notion of digital signatures, and gave several different constructions.  We saw how we can use digital signatures to create a &ldquo;chain of trust&rdquo; via certificates, and how the TLS protocol, which protects web traffic, works.</p>
+</li>
+<li>
+<p>We talked about some advances notions and in particular saw the construction of the surprising concept of a <em>fully homomorphic encryption (FHE)</em> scheme which has been rightly <a href="http://bit-player.org/2012/computing-with-encrypted-data">called by Bryan Hayes</a> &ldquo;one of the most amazing magic tricks in all of computer science&rdquo;.  Using FHE and zero knowledge proofs, we can get multiparty secure computation, which basically means that in the setting of interactive protocols between several parties, we can establish a &ldquo;virtual trusted third party&rdquo; (or, as I prefer to call it, a &ldquo;virtual Chuck Norris&rdquo;).</p>
+</li>
+<li>
+<p>We also saw other variants of encryption such as <em>functional encryption</em>, <em>witness encryption</em> and <em>identity based encryption</em>, which allow for &ldquo;selective leaking&rdquo; of information. For functional encryption and witness encryption we don&rsquo;t yet have clean constructions under standard assumptions but only under obfuscation, but we saw how we could get identity based encryption using the random oracle heuristic and the assumption of the difficulty of the discrete logarithm problem in a group that admits an efficient <em>pairing</em> operation.</p>
+</li>
+<li>
+<p>We talked about the notion of obfuscation, which can be thought as the one tool that, if exists, would imply all the others. We saw that virtual black box obfuscation does not exist, but there might exist a weaker notion known as &ldquo;indistinguishability obfuscation&rdquo; and we saw how it can be useful via the example of a witness encryption and a digital signature scheme. We mentioned (without proof) that it can also be used to obtain a functional encryption scheme.</p>
+</li>
+<li>
+<p>We talked about how quantum computing can change the landscape of cryptography, making lattice based constructions our main candidate for public key schemes.</p>
+</li>
+<li>
+<p>Finally, we discussed some of the ethical and policy issues that arise in the applications of cryptography, and what is the impact cryptography has now, or can have in the future, on society.</p>
+</li>
+</ul>
+<h2 id="some-things-we-did-not-cover">
+  Some things we did not cover
+  <a class="anchor" href="#some-things-we-did-not-cover">#</a>
+</h2>
+<ul>
+<li>
+<p>We did not cover what is arguably the other &ldquo;fundamental theorem of cryptography&rdquo;, namely the equivalence of one-way functions and pseudorandom generators. A one-way function is an efficient map $F:{0,1}^<em>\rightarrow{0,1}^</em>$ that is hard to invert on a random input. That is,  for any efficient algorithm $A$ if $A$ is given $y=F(x)$ for uniformly chosen $x\leftarrow_R{0,1}^n$, then the probability that $A$ outputs $x&rsquo;$ with $F(x&rsquo;)=y$ is negligible. It can be shown that one-way functions are <em>minimal</em> in the sense that they are <em>necessary</em> for a great many cryptographic applications including pseudorandom generators and functions, encryption with key shorter than the message, hash functions, message authentication codes, and many more. (Most of these results are obtained via the work of Impagliazzo and Luby who showed that if one-way functions do not exist then there is a <em>universal posterior sampler</em> in the sense that for every probabilistic process $F$ that maps $x$ to $y$, there is an efficient algorithm that given $y$ can sample $x&rsquo;$ from a distribution close to the posterior distribution of $x$ conditioned on $F(x)=y$. This result is typically known as the equivalence of standard one-way functions and distributional one-way functions.) The fundamental result of Hastad, Impagliazzo, Levin and Luby is that one-way functions are also <em>sufficient</em> for much of private key cryptography since they imply the existence of pseudorandom generators.</p>
+</li>
+<li>
+<p>Related to this, although we mentioned this briefly, we did not go in depth into &ldquo;Impagliazzo&rsquo;s Worlds&rdquo; of algorithmica, heuristica, pessiland, minicrypt, cryptomania (and the new one of &ldquo;obfustopia&rdquo;). If this piques your curiosity, please read <a href="http://www.cs.mun.ca/~kol/courses/6743-w15/papers/russell-fiveworlds.pdf">this 1995 survey</a>.</p>
+</li>
+<li>
+<p>We did not go in detail into the design of private key cryptosystems such as the AES. Though we discussed modes of operation of block ciphers, we did not go into a full description of all modes that are used in practice. We also did not discuss cryptanalytic techniques such as linear and differential cryptanalysis. We also not discuss all technical issues that arise with length extension and padding of encryptions in practice.</p>
+</li>
+<li>
+<p>While we talked about bitcoin, the TLS protocol, two factor authentication systems, and some aspects of pretty good privacy, we restricted ourselves to abstractions of these systems and did not attempt a full &ldquo;end to end&rdquo; analysis of a complete system. I do hope you have learned the tools that you&rsquo;d be able to understand the full operation of such a system if you need to.</p>
+</li>
+<li>
+<p>While we talked about Shor&rsquo;s algorithm, the algorithm people actually use today to factor numbers is the <em>number field sieve</em>. It and its predecessor, the quadratic sieve, are well worth studying. The (freely available online) <a href="http://www.shoup.net/ntb/">book of Shoup</a> is an excellent source not just for these algorithms but general algorithmic group/number theory.</p>
+</li>
+<li>
+<p>We talked about some attacks on practical systems, but there many other attacks that teach us important lessons, not just about these particular systems, but also about security and cryptography in general (as well some human tendencies to repeat certain types of mistakes).</p>
+</li>
+</ul>
+<h2 id="what-i-hope-you-learned">
+  What I hope you learned
+  <a class="anchor" href="#what-i-hope-you-learned">#</a>
+</h2>
+<p>I hope you got an appreciation for cryptography, and an understanding of how it can surprise you both in the amazing security properties it can deliver, as well in the subtle, but often devastating ways, that it can fail.
+Beyond cryptography, I hope you got out of this course the ability to think a little differently - to be paranoid enough to see the world from the point of view of an adversary, but also the lesson that sometimes if something sounds crazy but is not downright impossible it might just be feasible.<br>
+But if these philosophical ramblings don&rsquo;t speak to you, as long as you know the difference between CPA and CCA and I won&rsquo;t catch you reusing a one-time pad, you should be in good shape :)</p>
+<p>I did not intend this course to teach you how to implement cryptographic algorithms, but I do hope that if you need to use cryptography at any point, you now have the skills to read up what&rsquo;s needed and be able to argue intelligently about the security of real-world systems.
+I also hope that you have now sufficient background to not be scared by the technical jargon and the abundance of adjectives in cryptography research papers and be able to read up on what you need to follow any paper that is interesting to you.</p>
+<p>Mostly, I just hope you enjoyed this last term and felt like this course was a good use of your time. I certainly did.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#some-things-we-did-not-cover">Some things we did not cover</a></li>
+    <li><a href="#what-i-hope-you-learned">What I hope you learned</a></li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
